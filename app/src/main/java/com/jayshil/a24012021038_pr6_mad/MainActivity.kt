@@ -1,6 +1,9 @@
 package com.jayshil.a24012021038_pr6_mad
 
+import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,5 +19,13 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        val alarmImage = findViewById<ImageView>(R.id.alarmImage)
+
+        val alarmAnimation = alarmImage.background as AnimationDrawable
+        alarmAnimation.start()
+
+        val heart = findViewById<TextView>(R.id.txtHeart)
+        val heartAnimation = heart.background as AnimationDrawable
+        heartAnimation.start()
     }
 }
